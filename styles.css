@@ -1,0 +1,276 @@
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8eee8;
+  color: #3a2924;
+  line-height: 1.6;
+}
+
+/* PORTADA / HERO */
+.hero {
+  background-image: url("./imagenes/Fondo-CL.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero-contenido {
+  background-color: rgba(255, 255, 255, 0.45);
+  padding: 35px;
+  border-radius: 20px;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 5.5rem;
+  color: #7a3e48;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1.2rem;
+  color: #4b2c33;
+}
+
+/* NAVEGACIÓN */
+nav {
+  background-color: #fff8f0;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ead8cf;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #7a3e48;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #c97b63;
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #7a3e48;
+  margin-bottom: 20px;
+}
+
+/* INICIO */
+#presentacion {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+#presentacion p {
+  font-size: 1.1rem;
+}
+
+/* PRODUCTOS CON FLEXBOX */
+.productos-contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card-producto {
+  background-color: #fffaf5;
+  width: 280px;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(90, 56, 48, 0.15);
+  text-align: center;
+}
+
+.card-producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.card-producto h3 {
+  color: #7a3e48;
+  margin-bottom: 10px;
+}
+
+.card-producto p {
+  margin-bottom: 12px;
+}
+
+.precio {
+  display: block;
+  font-weight: bold;
+  color: #c97b63;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.card-producto button {
+  background-color: #c97b63;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.card-producto button:hover {
+  background-color: #a95f4d;
+}
+
+/* RESEÑAS CON GRID */
+.resenas-contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card-resena {
+  background-color: #fffaf5;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(90, 56, 48, 0.12);
+}
+
+.card-resena h3 {
+  color: #7a3e48;
+  margin-bottom: 10px;
+}
+
+/* CONTACTO */
+#contacto {
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+form {
+  background-color: #fffaf5;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(90, 56, 48, 0.12);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #7a3e48;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #d8b8ad;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #c97b63;
+}
+
+form button {
+  background-color: #7a3e48;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #5e2f38;
+}
+
+/* FOOTER */
+footer {
+  background-color: #3a2924;
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 360px;
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-contenido {
+    padding: 25px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+
+  .resenas-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    padding: 22px;
+  }
+}
