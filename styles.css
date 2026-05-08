@@ -161,6 +161,140 @@ section h2 {
   background-color: #a95f4d;
 }
 
+.boton-galeria {
+  display: inline-block;
+  margin: 20px auto 0;
+  padding: 12px 22px;
+  background-color: #c97b63;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 14px rgba(90, 56, 48, 0.12);
+}
+
+.galeria-tazas {
+  max-width: 1100px;
+  margin: 0 auto 60px auto;
+  padding: 50px 30px;
+  text-align: center;
+  background-image: url("imagenes/fondo-galeria.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+  box-shadow: 0 4px 14px rgba(90, 56, 48, 0.12);
+}
+
+.galeria-descripcion {
+  max-width: 680px;
+  margin: 0 auto 25px;
+  text-align: center;
+  color: #6f5149;
+}
+
+.galeria-contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.galeria-contenedor a {
+  display: block;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(90, 56, 48, 0.12);
+  background-color: #fffaf5;
+}
+
+.galeria-contenedor img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.25s ease;
+}
+
+.galeria-contenedor a:hover img {
+  transform: scale(1.05);
+}
+
+.galeria-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 1000;
+}
+
+.galeria-modal.activo {
+  display: flex;
+}
+
+.galeria-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(58, 41, 36, 0.72);
+  backdrop-filter: blur(3px);
+}
+
+.galeria-modal-contenido {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 920px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galeria-modal-imagen {
+  width: 100%;
+  max-height: 82vh;
+  display: block;
+  object-fit: contain;
+  border-radius: 22px;
+  background-color: #fffaf5;
+  box-shadow: 0 10px 30px rgba(58, 41, 36, 0.25);
+}
+
+.galeria-modal-cerrar,
+.galeria-modal-prev,
+.galeria-modal-next {
+  position: absolute;
+  border: none;
+  background-color: rgba(255, 250, 245, 0.95);
+  color: #7a3e48;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(90, 56, 48, 0.18);
+}
+
+.galeria-modal-cerrar {
+  top: -18px;
+  right: -18px;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.galeria-modal-prev,
+.galeria-modal-next {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+}
+
+.galeria-modal-prev {
+  left: 16px;
+}
+
+.galeria-modal-next {
+  right: 16px;
+}
+
 /* RESEÑAS CON GRID */
 .resenas-contenedor {
   display: grid;
@@ -354,6 +488,42 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .galeria-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-modal {
+    padding: 18px;
+  }
+
+  .galeria-modal-contenido {
+    width: 100%;
+  }
+
+  .galeria-modal-imagen {
+    max-height: 72vh;
+  }
+
+  .galeria-modal-cerrar {
+    top: -12px;
+    right: -2px;
+  }
+
+  .galeria-modal-prev,
+  .galeria-modal-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+
+  .galeria-modal-prev {
+    left: 8px;
+  }
+
+  .galeria-modal-next {
+    right: 8px;
+  }
+
   .contacto-contenedor {
     grid-template-columns: 1fr;
   }
@@ -369,5 +539,11 @@ footer {
 
   .mapa iframe {
     height: 260px;
+  }
+}
+
+@media (max-width: 992px) {
+  .galeria-contenedor {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

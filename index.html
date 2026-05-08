@@ -20,7 +20,7 @@
   <nav>
     <ul>
       <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#productos">Productos</a></li>
+      <li><a href="#galeria-tazas">Tazas</a></li>
       <li><a href="#resenas">Reseñas</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
@@ -32,15 +32,48 @@
         <h2>Diseños únicos para todos los días</h2>
         <p>
           En CeramicLab creamos tazas de cerámica pensadas para quienes buscan
-          tomar su café/Té con estilo y originalidad. Cada diseño combina delicadeza,
+          tomar su café/té con estilo y originalidad. Cada diseño combina delicadeza,
           creatividad y un toque artesanal.
         </p>
       </div>
     </section>
 
-    <section id="productos">
-      <h2>Nuestras tazas</h2>
+   
+    <section id="galeria-tazas" class="galeria-tazas">
+      <h2>Galería de tazas</h2>
+      <p class="galeria-descripcion">Algunos de nuestros diseños exclusivos de cerámica.</p>
+
+      <div class="galeria-contenedor">
+        <a href="imagenes/taza-1.jpg" class="galeria-item" aria-label="Abrir imagen 1 de la galería">
+          <img src="imagenes/taza-1.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 1" loading="lazy">
+        </a>
+        <a href="imagenes/taza-2.jpg" class="galeria-item" aria-label="Abrir imagen 2 de la galería">
+          <img src="imagenes/taza-2.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 2" loading="lazy">
+        </a>
+        <a href="imagenes/taza-3.jpg" class="galeria-item" aria-label="Abrir imagen 3 de la galería">
+          <img src="imagenes/taza-3.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 3" loading="lazy">
+        </a>
+        <a href="imagenes/taza-4.jpg" class="galeria-item" aria-label="Abrir imagen 4 de la galería">
+          <img src="imagenes/taza-4.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 4" loading="lazy">
+        </a>
+        <a href="imagenes/taza-5.jpg" class="galeria-item" aria-label="Abrir imagen 5 de la galería">
+          <img src="imagenes/taza-5.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 5" loading="lazy">
+        </a>
+        <a href="imagenes/taza-6.jpg" class="galeria-item" aria-label="Abrir imagen 6 de la galería">
+          <img src="imagenes/taza-6.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 6" loading="lazy">
+        </a>
+      </div>
     </section>
+
+    <div class="galeria-modal" id="galeria-modal" aria-hidden="true">
+      <div class="galeria-modal-overlay" data-close-modal="true"></div>
+      <div class="galeria-modal-contenido" role="dialog" aria-modal="true" aria-label="Visor de imágenes de la galería">
+        <button type="button" class="galeria-modal-cerrar" aria-label="Cerrar galería">&times;</button>
+        <button type="button" class="galeria-modal-prev" aria-label="Imagen anterior">&#10094;</button>
+        <img src="" alt="" class="galeria-modal-imagen">
+        <button type="button" class="galeria-modal-next" aria-label="Imagen siguiente">&#10095;</button>
+      </div>
+    </div>
 
     <section id="resenas">
       <h2>Reseñas</h2>
@@ -114,5 +147,81 @@
   <footer>
     <p>© 2026 CeramicLab. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    const galeriaItems = Array.from(document.querySelectorAll(".galeria-item"));
+    const galeriaModal = document.getElementById("galeria-modal");
+    const galeriaModalImagen = galeriaModal.querySelector(".galeria-modal-imagen");
+    const galeriaCerrar = galeriaModal.querySelector(".galeria-modal-cerrar");
+    const galeriaPrev = galeriaModal.querySelector(".galeria-modal-prev");
+    const galeriaNext = galeriaModal.querySelector(".galeria-modal-next");
+    let galeriaActual = 0;
+
+    function renderizarImagen(index) {
+      const item = galeriaItems[index];
+      const imagen = item.querySelector("img");
+      galeriaModalImagen.src = item.getAttribute("href");
+      galeriaModalImagen.alt = imagen.alt;
+      galeriaActual = index;
+    }
+
+    function abrirModal(index) {
+      renderizarImagen(index);
+      galeriaModal.classList.add("activo");
+      galeriaModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function cerrarModal() {
+      galeriaModal.classList.remove("activo");
+      galeriaModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function mostrarSiguiente() {
+      const siguiente = (galeriaActual + 1) % galeriaItems.length;
+      renderizarImagen(siguiente);
+    }
+
+    function mostrarAnterior() {
+      const anterior = (galeriaActual - 1 + galeriaItems.length) % galeriaItems.length;
+      renderizarImagen(anterior);
+    }
+
+    galeriaItems.forEach((item, index) => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+        abrirModal(index);
+      });
+    });
+
+    galeriaCerrar.addEventListener("click", cerrarModal);
+    galeriaNext.addEventListener("click", mostrarSiguiente);
+    galeriaPrev.addEventListener("click", mostrarAnterior);
+
+    galeriaModal.addEventListener("click", (event) => {
+      if (event.target.dataset.closeModal === "true") {
+        cerrarModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!galeriaModal.classList.contains("activo")) {
+        return;
+      }
+
+      if (event.key === "Escape") {
+        cerrarModal();
+      }
+
+      if (event.key === "ArrowRight") {
+        mostrarSiguiente();
+      }
+
+      if (event.key === "ArrowLeft") {
+        mostrarAnterior();
+      }
+    });
+  </script>
 </body>
 </html>
