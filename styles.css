@@ -190,46 +190,35 @@ section h2 {
   color: #c97b63;
 }
 
+/* CONTACTO */
+#contacto {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+}
+
 .contacto-contenedor {
   display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(380px, 1.1fr);
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
-  align-items: start;
   max-width: 1100px;
-  margin: 0 auto 30px;
+  margin: 0 auto 35px auto;
+  align-items: stretch;
 }
 
-.info-contacto,
-.contacto-contenedor form {
-  min-height: 300px;
-}
-
-.contacto-contenedor form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  min-width: 280px;
-  align-self: start;
-}
-
-.mapa {
-  grid-column: 1 / -1;
-  grid-row: 2 / 3;
-  background-color: #fffaf5;
-  padding: 20px;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(90, 56, 48, 0.12);
-}
-
+/* CARD IZQUIERDO */
 .info-contacto {
   background-color: #fffaf5;
-  padding: 25px;
   border-radius: 18px;
   box-shadow: 0 4px 14px rgba(90, 56, 48, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+
+.info-contacto-texto {
+  padding: 25px;
 }
 
 .info-contacto h3 {
@@ -241,44 +230,43 @@ section h2 {
   margin-bottom: 10px;
 }
 
-.mapa iframe {
-  display: block;
-  width: 100%;
-  min-height: 260px;
-  border: 0;
-}
+/* IMAGEN DE TAZAS */
 .imagen-tazas-contacto {
-  margin: auto -25px -25px -25px;
-  overflow: hidden;
-  border-radius: 0 0 18px 18px;
+  margin: auto 0 0 0;
+  width: 100%;
 }
 
 .imagen-tazas-contacto img {
   width: 100%;
-  height: 180px;
+  height: 160px;
   display: block;
   object-fit: cover;
   object-position: center;
 }
 
-
-form {
+/* CARD DERECHO / FORMULARIO */
+.contacto-contenedor form {
   background-color: #fffaf5;
-  padding: 30px;
+  padding: 25px;
   border-radius: 18px;
   box-shadow: 0 4px 14px rgba(90, 56, 48, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
 }
 
-label {
+.contacto-contenedor label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
   color: #7a3e48;
 }
 
-input,
-textarea {
+.contacto-contenedor input,
+.contacto-contenedor textarea {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 12px;
   margin-bottom: 18px;
   border: 1px solid #d8b8ad;
@@ -286,28 +274,46 @@ textarea {
   font-family: Arial, sans-serif;
 }
 
-textarea {
+.contacto-contenedor textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-input:focus,
-textarea:focus {
+.contacto-contenedor input:focus,
+.contacto-contenedor textarea:focus {
   outline: none;
   border-color: #c97b63;
 }
 
-form button {
+.contacto-contenedor button {
+  width: 100%;
   background-color: #7a3e48;
   color: white;
   border: none;
   padding: 12px 22px;
   border-radius: 25px;
   cursor: pointer;
+  margin-top: auto;
 }
 
-form button:hover {
+.contacto-contenedor button:hover {
   background-color: #5e2f38;
+}
+
+/* MAPA ABAJO, ANCHO COMPLETO */
+.mapa {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(90, 56, 48, 0.12);
+}
+
+.mapa iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border: 0;
 }
 
 /* FOOTER */
@@ -350,7 +356,20 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  form {
-    padding: 22px;
+  .contacto-contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .info-contacto,
+  .contacto-contenedor form {
+    min-height: auto;
+  }
+
+  .imagen-tazas-contacto img {
+    height: auto;
+  }
+
+  .mapa iframe {
+    height: 260px;
   }
 }
