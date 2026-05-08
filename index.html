@@ -8,114 +8,111 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  </head>
+</head>
 <body>
-
-    <header class="hero" id="inicio">
-  <div class="hero-contenido">
-    <h1>CeramicLab</h1>
-    <p>Â¡Tazas de cerÃ¡mica con diseÃ±os exclusivos y estilos creativos!</p>
-  </div>
-</header>
-
+  <header class="hero" id="inicio">
+    <div class="hero-contenido">
+      <h1>CeramicLab</h1>
+      <p>¡Tazas de cerámica con diseños exclusivos y estilos creativos!</p>
+    </div>
+  </header>
 
   <nav>
     <ul>
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#productos">Productos</a></li>
-      <li><a href="#resenas">ReseÃ±as</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 
   <main>
-  <section id="presentacion" class="presentacion">
-  <div class="presentacion-caja">
-    <h2>DiseÃ±os Ãºnicos para todos los dÃ­as</h2>
-    <p>
-      En CeramicLab creamos tazas de cerÃ¡mica pensadas para quienes buscan
-      tomar su cafÃ© con estilo y originalidad. Cada diseÃ±o combina delicadeza,
-      creatividad y un toque artesanal.
-    </p>
-  </div>
-</section>
+    <section id="presentacion" class="presentacion">
+      <div class="presentacion-caja">
+        <h2>Diseños únicos para todos los días</h2>
+        <p>
+          En CeramicLab creamos tazas de cerámica pensadas para quienes buscan
+          tomar su café con estilo y originalidad. Cada diseño combina delicadeza,
+          creatividad y un toque artesanal.
+        </p>
+      </div>
+    </section>
 
     <section id="productos">
       <h2>Nuestras tazas</h2>
     </section>
 
     <section id="resenas">
-  <h2>ReseÃ±as</h2>
+      <h2>Reseñas</h2>
 
-  <div class="resenas-contenedor">
-    <article class="card-resena">
-      <h3>Agustina</h3>
-      <div class="rating">ðŸµðŸµðŸµðŸµ</div>
-      <p>"La taza es hermosa y la calidad de la cerÃ¡mica me encantÃ³. Muy recomendable."</p>
-    </article>
+      <div class="resenas-contenedor">
+        <article class="card-resena">
+          <h3>Agustina</h3>
+          <div class="rating">🍵🍵🍵🍵</div>
+          <p>"La taza es hermosa y la calidad de la cerámica me encantó. Muy recomendable."</p>
+        </article>
 
-    <article class="card-resena">
-      <h3>Camila</h3>
-      <div class="rating">ðŸµðŸµðŸµðŸµ</div>
-      <p>"Me gustÃ³ mucho el diseÃ±o, se nota el estilo artesanal y original."</p>
-    </article>
+        <article class="card-resena">
+          <h3>Camila</h3>
+          <div class="rating">🍵🍵🍵🍵</div>
+          <p>"Me gustó mucho el diseño, se nota el estilo artesanal y original."</p>
+        </article>
 
-    <article class="card-resena">
-      <h3>Gisela</h3>
-      <div class="rating">ðŸµðŸµðŸµ</div>
-      <p>"ComprÃ© una para regalo y fue un Ã©xito. SÃºper delicada y distinta."</p>
-    </article>
-  </div>
-</section>
+        <article class="card-resena">
+          <h3>Gisela</h3>
+          <div class="rating">🍵🍵🍵</div>
+          <p>"Compré una para regalo y fue un éxito. Súper delicada y distinta."</p>
+        </article>
+      </div>
+    </section>
 
     <section id="contacto">
-  <h2>Contacto</h2>
+      <h2>Contacto</h2>
 
-  <div class="contacto-contenedor">
-    <div class="info-contacto">
-      <div class="info-contacto-texto">
-        <h3>Encontranos</h3>
-        <p><strong>Dirección:</strong> Av. Santa Fe 2450, Buenos Aires</p>
-        <p><strong>Teléfono:</strong> +54 11 2345-6789</p>
-        <p><strong>Email:</strong> ceramiclab.tienda@gmail.com</p>
-        <p><strong>Horario:</strong> Lunes a sábado de 10 a 19 hs</p>
+      <div class="contacto-contenedor">
+        <div class="info-contacto">
+          <div class="info-contacto-texto">
+            <h3>Encontranos</h3>
+            <p><strong>Dirección:</strong> Av. Santa Fe 2450, Buenos Aires</p>
+            <p><strong>Teléfono:</strong> +54 11 2345-6789</p>
+            <p><strong>Email:</strong> ceramiclab.tienda@gmail.com</p>
+            <p><strong>Horario:</strong> Lunes a sábado de 10 a 19 hs</p>
+          </div>
+
+          <figure class="imagen-tazas-contacto">
+            <img src="imagenes/Tazas.jpg" alt="Ilustración decorativa de varias tazas" loading="lazy">
+          </figure>
+        </div>
+
+        <form action="https://formspree.io/f/TU_CODIGO" method="POST">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
       </div>
 
-      <figure class="imagen-tazas-contacto">
-        <img src="imagenes/Tazas.jpg" alt="Ilustración decorativa de varias tazas" loading="lazy">
-      </figure>
-    </div>
-
-    <form action="https://formspree.io/f/TU_CODIGO" method="POST">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required>
-
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" required></textarea>
-
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-
-  <div class="mapa">
-    <iframe
-      src="https://www.google.com/maps?q=Av.%20Santa%20Fe%202450,%20Buenos%20Aires&output=embed"
-      width="100%"
-      height="300"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps?q=Av.%20Santa%20Fe%202450,%20Buenos%20Aires&output=embed"
+          width="100%"
+          height="300"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>Â© 2026 CeramicLab. Todos los derechos reservados.</p>
+    <p>© 2026 CeramicLab. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>

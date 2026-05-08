@@ -1,5 +1,4 @@
-
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -99,7 +98,6 @@ section h2 {
 #presentacion p {
   font-size: 1.1rem;
 }
-
 
 .presentacion {
   display: flex;
