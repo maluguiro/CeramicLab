@@ -29,22 +29,86 @@
   </nav>
 
   <main>
-    <section id="presentación">
-      <h2>Diseños únicos para todos los días</h2>
-      <p>En CeramicLab creamos tazas de cerámica pensadas para quienes buscan tomar su café con estilo y originalidad.</p>
-    </section>
+  <section id="presentacion" class="presentacion">
+  <div class="presentacion-caja">
+    <h2>Diseños únicos para todos los días</h2>
+    <p>
+      En CeramicLab creamos tazas de cerámica pensadas para quienes buscan
+      tomar su café con estilo y originalidad. Cada diseño combina delicadeza,
+      creatividad y un toque artesanal.
+    </p>
+  </div>
+</section>
 
     <section id="productos">
       <h2>Nuestras tazas</h2>
     </section>
 
     <section id="resenas">
-      <h2>Reseñas</h2>
-    </section>
+  <h2>Reseñas</h2>
+
+  <div class="resenas-contenedor">
+    <article class="card-resena">
+      <h3>Agustina</h3>
+      <div class="rating">🍵🍵🍵🍵</div>
+      <p>"La taza es hermosa y la calidad de la cerámica me encantó. Muy recomendable."</p>
+    </article>
+
+    <article class="card-resena">
+      <h3>Camila</h3>
+      <div class="rating">🍵🍵🍵🍵</div>
+      <p>"Me gustó mucho el diseño, se nota el estilo artesanal y original."</p>
+    </article>
+
+    <article class="card-resena">
+      <h3>Gisela</h3>
+      <div class="rating">🍵🍵🍵</div>
+      <p>"Compré una para regalo y fue un éxito. Súper delicada y distinta."</p>
+    </article>
+  </div>
+</section>
 
     <section id="contacto">
-      <h2>Contacto</h2>
-    </section>
+  <h2>Contacto</h2>
+
+  <div class="contacto-contenedor">
+    <div class="info-contacto">
+  <h3>Encontranos</h3>
+  <p><strong>Dirección:</strong> Av. Santa Fe 2450, Buenos Aires</p>
+  <p><strong>Teléfono:</strong> +54 11 2345-6789</p>
+  <p><strong>Email:</strong> ceramiclab.tienda@gmail.com</p>
+  <p><strong>Horario:</strong> Lunes a sábado de 10 a 19 hs</p>
+
+  <figure class="imagen-tazas-contacto">
+    <img src="imagenes/Tazas.jpg" alt="Ilustración decorativa de varias tazas" loading="lazy">
+  </figure>
+</div>
+
+    <form action="https://formspree.io/f/xykodpkn" method="POST">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps?q=Av.%20Santa%20Fe%202450,%20Buenos%20Aires&output=embed"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer>
