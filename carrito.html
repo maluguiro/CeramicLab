@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CeramicLab | Carrito de compras</title>
+  <meta
+    name="description"
+    content="Revisá tu carrito de CeramicLab, ajustá cantidades y finalizá la selección de tus tazas de cerámica artesanal."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero hero-secundario" id="inicio">
+    <div class="hero-contenido">
+      <h1>CeramicLab</h1>
+      <p>Revisá tu carrito y ajustá tu selección antes de continuar.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <ul>
+      <li><a href="Index.html#inicio">Inicio</a></li>
+      <li><a href="Index.html#galeria-tazas">Tazas</a></li>
+      <li><a href="carrito.html">Carrito (0)</a></li>
+      <li><a href="Index.html#resenas">Reseñas</a></li>
+      <li><a href="Index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div id="toast-feedback" class="toast-feedback" aria-live="polite"></div>
+
+  <main>
+    <section id="carrito" class="carrito-seccion">
+      <h2>Carrito</h2>
+      <div class="carrito-contenedor">
+        <div id="carrito-vacio" class="carrito-vacio">
+          Tu carrito está vacío.
+        </div>
+
+        <div class="carrito-tabla">
+          <div class="carrito-encabezado">
+            <span>Producto</span>
+            <span>Cantidad</span>
+            <span>Precio</span>
+            <span>Subtotal</span>
+            <span>Acciones</span>
+          </div>
+          <div id="carrito-items" class="carrito-items" aria-live="polite"></div>
+        </div>
+
+        <div class="carrito-resumen">
+          <p><strong>Total:</strong> <span id="carrito-total">$0</span></p>
+        </div>
+
+        <div class="carrito-acciones">
+          <a href="Index.html#galeria-tazas" class="carrito-accion-btn secundario">Seguir comprando</a>
+          <button type="button" id="vaciar-carrito" class="carrito-accion-btn secundario">Vaciar carrito</button>
+          <button type="button" id="finalizar-compra" class="carrito-accion-btn">Finalizar compra</button>
+        </div>
+
+        <p id="carrito-estado" class="carrito-feedback" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 CeramicLab. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

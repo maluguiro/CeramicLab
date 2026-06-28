@@ -1,9 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CeramicLab</title>
+  <title>CeramicLab | Tazas de cerámica artesanal</title>
+  <meta
+    name="description"
+    content="CeramicLab ofrece tazas de cerámica artesanal con diseños exclusivos. Explorá la galería, elegí tus favoritas y sumalas al carrito."
+  >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
@@ -17,14 +21,20 @@
     </div>
   </header>
 
-  <nav>
+  <nav aria-label="Navegación principal">
     <ul>
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#galeria-tazas">Tazas</a></li>
+      <li><a href="carrito.html">Carrito (0)</a></li>
       <li><a href="#resenas">Reseñas</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
+
+  <div id="toast-feedback" class="toast-feedback" aria-live="polite"></div>
+  <a href="carrito.html" id="carrito-flotante" class="carrito-flotante" aria-label="Ir al carrito">
+    Ir al carrito (<span id="carrito-flotante-contador">0</span>)
+  </a>
 
   <main>
     <section id="presentacion" class="presentacion">
@@ -32,36 +42,51 @@
         <h2>Diseños únicos para todos los días</h2>
         <p>
           En CeramicLab creamos tazas de cerámica pensadas para quienes buscan
-          tomar su café/té con estilo y originalidad. Cada diseño combina delicadeza,
+          tomar su café o té con estilo y originalidad. Cada diseño combina delicadeza,
           creatividad y un toque artesanal.
         </p>
       </div>
     </section>
 
-   
     <section id="galeria-tazas" class="galeria-tazas">
-      <h2>Galería de tazas</h2>
-      <p class="galeria-descripcion">Algunos de nuestros diseños exclusivos de cerámica.</p>
+      <h2>Diseños destacados</h2>
+      <p class="galeria-descripcion">Una selección visual de nuestras tazas más destacadas.</p>
 
       <div class="galeria-contenedor">
-        <a href="imagenes/taza-1.jpg" class="galeria-item" aria-label="Abrir imagen 1 de la galería">
+        <a href="imagenes/taza-1.jpg" class="galeria-item" data-producto-id="1" aria-label="Abrir imagen 1 de la galería">
           <img src="imagenes/taza-1.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 1" loading="lazy">
+          <span class="galeria-info"></span>
         </a>
-        <a href="imagenes/taza-2.jpg" class="galeria-item" aria-label="Abrir imagen 2 de la galería">
+        <a href="imagenes/taza-2.jpg" class="galeria-item" data-producto-id="2" aria-label="Abrir imagen 2 de la galería">
           <img src="imagenes/taza-2.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 2" loading="lazy">
+          <span class="galeria-info"></span>
         </a>
-        <a href="imagenes/taza-3.jpg" class="galeria-item" aria-label="Abrir imagen 3 de la galería">
+        <a href="imagenes/taza-3.jpg" class="galeria-item" data-producto-id="3" aria-label="Abrir imagen 3 de la galería">
           <img src="imagenes/taza-3.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 3" loading="lazy">
+          <span class="galeria-info"></span>
         </a>
-        <a href="imagenes/taza-4.jpg" class="galeria-item" aria-label="Abrir imagen 4 de la galería">
+        <a href="imagenes/taza-4.jpg" class="galeria-item" data-producto-id="4" aria-label="Abrir imagen 4 de la galería">
           <img src="imagenes/taza-4.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 4" loading="lazy">
+          <span class="galeria-info"></span>
         </a>
-        <a href="imagenes/taza-5.jpg" class="galeria-item" aria-label="Abrir imagen 5 de la galería">
+        <a href="imagenes/taza-5.jpg" class="galeria-item" data-producto-id="5" aria-label="Abrir imagen 5 de la galería">
           <img src="imagenes/taza-5.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 5" loading="lazy">
+          <span class="galeria-info"></span>
         </a>
-        <a href="imagenes/taza-6.jpg" class="galeria-item" aria-label="Abrir imagen 6 de la galería">
+        <a href="imagenes/taza-6.jpg" class="galeria-item" data-producto-id="6" aria-label="Abrir imagen 6 de la galería">
           <img src="imagenes/taza-6.jpg" alt="Taza de cerámica artesanal con diseño exclusivo 6" loading="lazy">
+          <span class="galeria-info"></span>
         </a>
+      </div>
+
+      <button type="button" id="galeria-toggle" class="boton-galeria">Ver más</button>
+
+      <div class="catalogo-tazas">
+        <h3>Comprar tazas</h3>
+        <p class="catalogo-descripcion">Explora el catálogo y agregá tus favoritas al carrito.</p>
+        <div id="productos-contenedor" class="productos-contenedor" aria-live="polite"></div>
+        <p id="productos-mensaje" class="productos-mensaje" aria-live="polite"></p>
+        <p id="carrito-feedback" class="carrito-feedback" aria-live="polite"></p>
       </div>
     </section>
 
@@ -70,7 +95,14 @@
       <div class="galeria-modal-contenido" role="dialog" aria-modal="true" aria-label="Visor de imágenes de la galería">
         <button type="button" class="galeria-modal-cerrar" aria-label="Cerrar galería">&times;</button>
         <button type="button" class="galeria-modal-prev" aria-label="Imagen anterior">&#10094;</button>
-        <img src="" alt="" class="galeria-modal-imagen">
+        <div class="lightbox-panel">
+          <img src="" alt="" class="galeria-modal-imagen">
+          <div class="lightbox-info">
+            <h3 class="lightbox-titulo"></h3>
+            <p class="lightbox-precio"></p>
+            <p class="lightbox-descripcion"></p>
+          </div>
+        </div>
         <button type="button" class="galeria-modal-next" aria-label="Imagen siguiente">&#10095;</button>
       </div>
     </div>
@@ -134,6 +166,7 @@
       <div class="mapa">
         <iframe
           src="https://www.google.com/maps?q=Av.%20Santa%20Fe%202450,%20Buenos%20Aires&output=embed"
+          title="Ubicación de CeramicLab en el mapa"
           width="100%"
           height="300"
           style="border:0;"
@@ -148,80 +181,6 @@
     <p>© 2026 CeramicLab. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-    const galeriaItems = Array.from(document.querySelectorAll(".galeria-item"));
-    const galeriaModal = document.getElementById("galeria-modal");
-    const galeriaModalImagen = galeriaModal.querySelector(".galeria-modal-imagen");
-    const galeriaCerrar = galeriaModal.querySelector(".galeria-modal-cerrar");
-    const galeriaPrev = galeriaModal.querySelector(".galeria-modal-prev");
-    const galeriaNext = galeriaModal.querySelector(".galeria-modal-next");
-    let galeriaActual = 0;
-
-    function renderizarImagen(index) {
-      const item = galeriaItems[index];
-      const imagen = item.querySelector("img");
-      galeriaModalImagen.src = item.getAttribute("href");
-      galeriaModalImagen.alt = imagen.alt;
-      galeriaActual = index;
-    }
-
-    function abrirModal(index) {
-      renderizarImagen(index);
-      galeriaModal.classList.add("activo");
-      galeriaModal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    }
-
-    function cerrarModal() {
-      galeriaModal.classList.remove("activo");
-      galeriaModal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
-
-    function mostrarSiguiente() {
-      const siguiente = (galeriaActual + 1) % galeriaItems.length;
-      renderizarImagen(siguiente);
-    }
-
-    function mostrarAnterior() {
-      const anterior = (galeriaActual - 1 + galeriaItems.length) % galeriaItems.length;
-      renderizarImagen(anterior);
-    }
-
-    galeriaItems.forEach((item, index) => {
-      item.addEventListener("click", (event) => {
-        event.preventDefault();
-        abrirModal(index);
-      });
-    });
-
-    galeriaCerrar.addEventListener("click", cerrarModal);
-    galeriaNext.addEventListener("click", mostrarSiguiente);
-    galeriaPrev.addEventListener("click", mostrarAnterior);
-
-    galeriaModal.addEventListener("click", (event) => {
-      if (event.target.dataset.closeModal === "true") {
-        cerrarModal();
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (!galeriaModal.classList.contains("activo")) {
-        return;
-      }
-
-      if (event.key === "Escape") {
-        cerrarModal();
-      }
-
-      if (event.key === "ArrowRight") {
-        mostrarSiguiente();
-      }
-
-      if (event.key === "ArrowLeft") {
-        mostrarAnterior();
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+﻿[
+  {
+    "id": 1,
+    "nombre": "Taza Aurora",
+    "descripcion": "Cerámica artesanal con acabado suave en tonos tierra.",
+    "precio": 12500,
+    "imagen": "imagenes/taza-1.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Taza Brisa",
+    "descripcion": "Diseño liviano y delicado para café o té de todos los días.",
+    "precio": 13200,
+    "imagen": "imagenes/taza-2.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Taza Nube",
+    "descripcion": "Pieza única con detalles artesanales y estilo contemporáneo.",
+    "precio": 11900,
+    "imagen": "imagenes/taza-3.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Taza Siena",
+    "descripcion": "Taza de cerámica esmaltada con presencia cálida y elegante.",
+    "precio": 14100,
+    "imagen": "imagenes/taza-4.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Taza Loto",
+    "descripcion": "Modelo artesanal con formas orgánicas y terminación brillante.",
+    "precio": 12800,
+    "imagen": "imagenes/taza-5.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Taza Alba",
+    "descripcion": "Diseño exclusivo ideal para regalar o completar tu colección.",
+    "precio": 13600,
+    "imagen": "imagenes/taza-6.jpg"
+  }
+]
