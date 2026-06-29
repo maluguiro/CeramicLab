@@ -1,39 +1,60 @@
-# Proyecto de Front-End - TalentoTech - CeramicLab
+# CeramicLab - Proyecto Final Front-End
 
-CeramicLab es una página web simple de una tienda ficticia de tazas de cerámica con diseños originales y creativos.
+CeramicLab es una tienda online ficticia de tazas de cerámica artesanales desarrollada como proyecto final del curso de Front-End de Talento Tech.
 
-El proyecto fue desarrollado como parte de la pre-entrega de Front-End. La idea fue construir una landing page simple, clara y visualmente cuidada, aplicando los contenidos vistos hasta la clase 8.
+La idea del proyecto fue tomar la landing page realizada en la pre-entrega e ir incorporando los contenidos vistos durante el curso hasta convertirla en un pequeño e-commerce funcional.
 
-## Objetivo del proyecto
+## La pagina nos permite: 
 
-El objetivo principal fue practicar la estructura de una página web usando HTML semántico y CSS, incorporando secciones básicas como inicio, productos, reseñas y contacto.
-
-También busqué que la estética acompañe la identidad de la marca, usando colores cálidos, fondos suaves y una organización visual relacionada con una tienda artesanal.
-
-## Secciones del sitio
-
-- Inicio: presentación general de CeramicLab.
-- Productos: cards con diferentes modelos de tazas.
-- Reseñas: opiniones de clientes.
-- Contacto: formulario para que el usuario pueda enviar un mensaje.
-- Footer: información final de la pagina.
+* Recorrer un catálogo de tazas con imágenes, nombre y precio.
+* Ver una galería con los diseños destacados.
+* Agregar productos al carrito.
+* Modificar cantidades o eliminar productos.
+* Mantener el carrito guardado aunque se actualice la página gracias a localStorage.
+* Simular una compra.
+* Contactarse mediante un formulario conectado con Formspree.
 
 ## Tecnologías utilizadas
 
-- HTML5: para crear la estructura del sitio y organizar el contenido con etiquetas semánticas.
-- CSS3: para aplicar estilos visuales, colores, espaciados, fondos y diseño general.
-- Google Fonts: para personalizar la tipografía y mejorar la identidad visual.
-- Flexbox: para distribuir las cards de productos de manera flexible.
-- Grid: para organizar la sección de reseñas en forma de grilla.
-- Media Queries: para adaptar el diseño a pantallas más pequeñas.
-- Formspree: para preparar el envío del formulario de contacto sin usar backend propio.
-- Git: para controlar las versiones del proyecto.
-- GitHub: para subir el repositorio.
-- GitHub Pages: para publicar el sitio online.
+* HTML5
+* CSS3
+* JavaScript
+* Flexbox
+* CSS Grid
+* Media Queries
+* Fetch API
+* LocalStorage
+* JSON
+* Google Fonts
+* Formspree
+* Google Maps
+* Git y GitHub
+* GitHub Pages
 
-## Estado del proyecto
+## Organización del proyecto
 
-El proyecto se encuentra en etapa de pre-entrega. Todavía puede seguir mejorándose con más conocimientos incorporados en las proximas clases.
+* `index.html`: página principal.
+* `carrito.html`: carrito de compras.
+* `styles.css`: estilos del sitio.
+* `script.js`: toda la lógica e interactividad.
+* `productos.json`: catálogo consumido mediante Fetch API.
+* `imagenes/`: imágenes utilizadas en el proyecto.
+
+## Aspectos trabajados
+
+Durante el desarrollo se aplicaron varios de los temas vistos en el curso:
+
+* HTML semántico.
+* Diseño responsivo.
+* Manipulación del DOM.
+* Consumo de datos mediante Fetch API.
+* Persistencia de información con LocalStorage.
+* Validación del formulario.
+* Buenas prácticas básicas de accesibilidad y SEO.
+
+## Cómo ejecutar el proyecto
+
+Se puede acceder al proyecto ingresando a https://maluguiro.github.io/CeramicLab/#inicio
 
 ## Desarrolladora
 
