@@ -11,6 +11,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,17 +29,17 @@
 
   <nav aria-label="Navegación principal">
     <ul>
-      <li><a href="./#inicio">Inicio</a></li>
-      <li><a href="./#tazas">Tazas</a></li>
+      <li><a href="index.html#inicio">Inicio</a></li>
+      <li><a href="index.html#galeria-tazas">Tazas</a></li>
       <li><a href="carrito.html">Carrito (0)</a></li>
-      <li><a href="./#resenas">Reseñas</a></li>
-      <li><a href="./#contacto">Contacto</a></li>
+      <li><a href="index.html#resenas">Reseñas</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
     </ul>
   </nav>
 
   <div id="toast-feedback" class="toast-feedback" aria-live="polite"></div>
 
-  <main>
+  <main class="container-fluid px-0">
     <section id="carrito" class="carrito-seccion">
       <h2>Carrito</h2>
       <div class="carrito-contenedor">
@@ -57,7 +63,7 @@
         </div>
 
         <div class="carrito-acciones">
-          <a href="./#tazas" class="carrito-accion-btn secundario">Seguir comprando</a>
+          <a href="index.html#tazas" class="carrito-accion-btn secundario">Seguir comprando</a>
           <button type="button" id="vaciar-carrito" class="carrito-accion-btn secundario">Vaciar carrito</button>
           <button type="button" id="finalizar-compra" class="carrito-accion-btn">Finalizar compra</button>
         </div>
@@ -71,8 +77,11 @@
     <p>© 2026 CeramicLab. Todos los derechos reservados.</p>
   </footer>
 
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
   <script src="script.js"></script>
 </body>
 </html>
-
-

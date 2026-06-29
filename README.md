@@ -4,7 +4,7 @@ CeramicLab es una tienda online ficticia de tazas de cerámica artesanales desar
 
 La idea del proyecto fue tomar la landing page realizada en la pre-entrega e ir incorporando los contenidos vistos durante el curso hasta convertirla en un pequeño e-commerce funcional.
 
-## La pagina nos permite: 
+## La página nos permite:
 
 * Recorrer un catálogo de tazas con imágenes, nombre y precio.
 * Ver una galería con los diseños destacados.
@@ -25,6 +25,7 @@ La idea del proyecto fue tomar la landing page realizada en la pre-entrega e ir 
 * Fetch API
 * LocalStorage
 * JSON
+* Bootstrap 5
 * Google Fonts
 * Formspree
 * Google Maps
@@ -46,6 +47,7 @@ Durante el desarrollo se aplicaron varios de los temas vistos en el curso:
 
 * HTML semántico.
 * Diseño responsivo.
+* Integración mínima de Bootstrap como soporte de utilidades y responsividad.
 * Manipulación del DOM.
 * Consumo de datos mediante Fetch API.
 * Persistencia de información con LocalStorage.

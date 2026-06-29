@@ -11,6 +11,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,7 +42,7 @@
     Ir al carrito (<span id="carrito-flotante-contador">0</span>)
   </a>
 
-  <main>
+  <main class="container-fluid px-0">
     <section id="presentacion" class="presentacion">
       <div class="presentacion-caja">
         <h2>Diseños únicos para todos los días</h2>
@@ -81,7 +87,7 @@
 
       <button type="button" id="galeria-toggle" class="boton-galeria">Ver más</button>
 
-      <div class="catalogo-tazas">
+      <div id="tazas" class="catalogo-tazas">
         <h3>Comprar tazas</h3>
         <p class="catalogo-descripcion">Explora el catálogo y agregá tus favoritas al carrito.</p>
         <div id="productos-contenedor" class="productos-contenedor" aria-live="polite"></div>
@@ -145,9 +151,9 @@
           </div>
 
           <figure class="imagen-tazas-contacto">
-            <img src="imagenes/Tazas.jpg" alt="Ilustración decorativa de varias tazas" loading="lazy">
-          </figure>
-        </div>
+          <img src="imagenes/Tazas.jpg" alt="Ilustración decorativa de varias tazas" loading="lazy" class="img-fluid">
+        </figure>
+      </div>
 
         <form action="https://formspree.io/f/TU_CODIGO" method="POST">
           <label for="nombre">Nombre</label>
@@ -181,6 +187,11 @@
     <p>© 2026 CeramicLab. Todos los derechos reservados.</p>
   </footer>
 
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
   <script src="script.js"></script>
 </body>
 </html>

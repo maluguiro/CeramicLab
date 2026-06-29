@@ -47,7 +47,7 @@ body {
   color: #4b2c33;
 }
 
-/* NAVEGACIÃ“N */
+/* NAVEGACIÓN */
 nav {
   background-color: #fff8f0;
   padding: 16px 20px;
@@ -653,7 +653,7 @@ section h2 {
   right: 16px;
 }
 
-/* RESEÃ‘AS CON GRID */
+/* RESEÑAS CON GRID */
 .resenas-contenedor {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1014,3 +1014,4 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
